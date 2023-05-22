@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display:700');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&family=Zilla+Slab:wght@300&display=swap');
+
+:root{
+    margin: 0px;
+    padding: 0px;
+    --bg-color-dark: #101928;
+    --bg-color-light: #f5f5f5;
+    --font-dark: #101928;
+    --font-light: #f5f5f5;
+
+    --google-blue: #4285f4;
+    --google-red: #ea4335;
+    --google-yellow: #fbbc05;
+    --google-green: #34a853;
+    
+    --primary-font: 'Varela Round', sans-serif;
+    --secondary-font: 'Open Sans', sans-serif;
+    --tertiary-font: 'Teko', sans-serif;
+}
+section{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* TEAM */
+
+
+#team{
+
+    padding-top: 70px;
+    
+}
+
+.header{
+    font-family: 'Varela Round', sans-serif;
+
+}
+
+.header h1{
+    font-size: 50px;
+
+    text-align: center;
+
+}
+
+.header p{ 
+    font-size: 20px;
+    text-align: center;
+}
+
+
+#team .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#team .cards .members:hover{
+    transition: 0.5s;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#team .cards .members{
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    transition: 0.5s;
+    /* background-color: #1a265a7a */
+}
+#team .cards .members .photo{
+    width: 100%;
+    height: 160px;
+}
+
+#team .cards .members .photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#team .cards .members  img:hover{
+    transition: transform 1.1s;
+    transform: scale(1.11);
+}
+
+#team .cards .members  img:not(:hover){
+    transition: transform 2s;
+    transform: scale(1.0);
+}
+
+#team .cards .members .text{
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+} 
+
+#team .cards .members .text h4{
+    font-weight: 600;
+    font-size: 18px;
+} 
+#team .cards .members .text h5{
+    font-size: 18px;
+}
+
+
+@media (max-width:580px) {
+    #team{
+        padding: 10px;   
+    }
+    #team .card-main{
+        border-radius: 20px;
+        padding-top: 20px;
+    }
+
+    .header h1{
+        font-size: 30px;
+    }
+    
+    .header p{
+        font-size: 15px;
+    }
+    #team .cards .members{
+        margin-right: 20px;
+        margin-left: 20px;
+        padding: 20px;
+        margin: 10px;
+        width: 140px;
+        transition: 0.5s;
+        /* background-color: #1a265a7a */
+    }
+    #team .cards .members .photo{
+        width: 100%;
+        height: 100px;
+    }
+    
+    #team .cards .members .photo img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    #team .cards .members .text{
+        margin-top: 20px;
+    } 
+    
+    #team .cards .members .text h4{
+        font-weight: 600;
+        font-size: 15px;
+    } 
+    #team .cards .members .text h5{
+        font-size: 15px;
+    }
+    
+}
+
+.prev-team-header{
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 90px;
+}
+
+/* Prev Team button */
+.prevbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: "Helvetica Neue LT W01_41488878";
+}
+
+ul li {
+  margin: 0 0 24px;
+}
+
+.the-arrow {
+  width: 1px;
+  transition: all 0.2s;
+}
+.the-arrow.-left {
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+.the-arrow.-left > .shaft {
+  width: 0;
+  background-color: #000000;
+}
+.the-arrow.-left > .shaft:before, .the-arrow.-left > .shaft:after {
+  width: 0;
+  background-color: #000000;
+}
+.the-arrow.-left > .shaft:before {
+  transform: rotate(0);
+}
+.the-arrow.-left > .shaft:after {
+  transform: rotate(0);
+}
+.the-arrow.-right {
+  top: 3px;
+}
+.the-arrow.-right > .shaft {
+  width: 1px;
+  transition-delay: 0.2s;
+}
+.the-arrow.-right > .shaft:before, .the-arrow.-right > .shaft:after {
+  width: 8px;
+  transition-delay: 0.3s;
+  transition: all 0.5s;
+}
+.the-arrow.-right > .shaft:before {
+  transform: rotate(40deg);
+}
+.the-arrow.-right > .shaft:after {
+  transform: rotate(-40deg);
+}
+.the-arrow > .shaft {
+  background-color: #000000;
+  display: block;
+  height: 1px;
+  position: relative;
+  transition: all 0.2s;
+  transition-delay: 0;
+  will-change: transform;
+}
+.the-arrow > .shaft:before, .the-arrow > .shaft:after {
+  background-color: #000000;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.2s;
+  transition-delay: 0;
+}
+.the-arrow > .shaft:before {
+  transform-origin: top right;
+}
+.the-arrow > .shaft:after {
+  transform-origin: bottom right;
+}
+
+.animated-arrow {
+  display: inline-block;
+  color: #000000;
+  font-size: 1.25em;
+  font-style: italic;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
+}
+.animated-arrow:hover {
+  color: #000000;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft {
+  width: 64px;
+  transition-delay: 0.1s;
+  background-color: #000000;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before, .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  width: 8px;
+  transition-delay: 0.1s;
+  background-color: #000000;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before {
+  transform: rotate(40deg);
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  transform: rotate(-40deg);
+}
+.animated-arrow:hover > .main {
+  transform: translateX(17px);
+  transform: translateX(80px);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft {
+  width: 0;
+  transform: translateX(200%);
+  transition-delay: 0;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  width: 0;
+  transition-delay: 0;
+  transition: all 0.1s;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
+  transform: rotate(0);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  transform: rotate(0);
+}
+.animated-arrow > .main {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+.animated-arrow > .main > .text {
+  margin: 0 16px 0 0;
+  line-height: 1;
+}
+.animated-arrow > .main > .the-arrow {
+  position: relative;
+}
